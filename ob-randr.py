@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """A small utility to make xrandr adjustments from an OpenBox menu.
 
@@ -40,10 +40,14 @@ TODO:
 AUTHOR = 'Seth House <seth@eseth.com>, Petr Penzin <penzin.dev@gmail.com>'
 VERSION = '0.2'
 
-import ConfigParser
 import os
 import subprocess
 import sys
+
+try:
+    import configparser as ConfigParser
+except ImportError:
+    import ConfigParser
 
 try:
     from xml.etree import cElementTree as etree
